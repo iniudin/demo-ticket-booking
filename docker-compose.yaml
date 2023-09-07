@@ -1,0 +1,131 @@
+version: '3.8'
+services:
+  server:
+    build:
+      context: .
+    command: [ "./main", "server" ]
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: booking
+      DB_PASSWORD: booking
+      DB_NAME: booking
+      OTEL_RECEIVER_ENDPOINT: otel-collector:4317
+      REDIS_HOST: redis:6379
+    restart: unless-stopped
+    networks:
+      - booking
+  worker:
+    build:
+      context: .
+    command: [ "./main", "worker" ]
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: booking
+      DB_PASSWORD: booking
+      DB_NAME: booking
+      OTEL_RECEIVER_ENDPOINT: otel-collector:4317
+      REDIS_HOST: redis:6379
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+    networks:
+      - booking
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - booking
+    volumes:
+      - redis_data:/data
+  postgres:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=booking
+      - POSTGRES_PASSWORD=booking
+      - POSTGRES_DB=booking
+    restart: unless-stopped
+    networks:
+      - booking
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  migrate:
+    image: migrate/migrate
+    volumes:
+      - ./migration:/migration
+    command: [ "-path", "/migration", "-database",  "postgres://booking:booking@postgres:5432/booking?sslmode=disable", "up" ]
+    restart: on-failure
+    depends_on:
+      - postgres
+    networks:
+      - booking
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    command:
+      - "--memory.max-traces"
+      - "10000"
+      - "--query.base-path"
+      - "/jaeger/ui"
+    ports:
+      # Agent zipkin.thrift compact
+      - "5775:5775"
+      # Agent jaeger.thrift compact
+      - "6831:6831"
+      # Agent jaeger.thrift binary
+      - "6832:6832"
+      # Agent config HTTP
+      - "5778:5778"
+      # Collector HTTP
+      - "14268:14268"
+      # Collector gRPC
+      - "14250:14250"
+      # Web HTTP
+      - "16686:16686"
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    networks:
+      - booking
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./hack/prometheus-config.yaml:/etc/prometheus/prometheus-config.yaml
+    ports:
+      - "9090:9090"
+    networks:
+      - booking
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    command: --config=/etc/otel-collector-config.yaml
+    volumes:
+      - ./hack/otel-collector-config.yaml:/etc/otel-collector-config.yaml
+    ports:
+      - "4317:4317" # OTLP over gRPC receiver
+      - "4318:4318" # OTLP over HTTP receiver
+      - "9464:9464" # Prometheus exporter
+      - "8888:8888" # metrics endpoint
+    networks:
+      - booking
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 200M
+
+networks:
+  booking:
+    driver: bridge
+
+volumes:
+  redis_data:
+  postgres_data:

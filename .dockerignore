@@ -1,0 +1,311 @@
+# flyctl launch added from .idea/.gitignore
+# Default ignored files
+.idea/shelf
+.idea/workspace.xml
+# Editor-based HTTP Client requests
+.idea/httpRequests
+# Datasource local storage ignored files
+.idea/dataSources
+.idea/dataSources.local.xml
+
+# flyctl launch added from vendor/github.com/cenkalti/backoff/v4/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/cenkalti/backoff/v4/**/*.o
+vendor/github.com/cenkalti/backoff/v4/**/*.a
+vendor/github.com/cenkalti/backoff/v4/**/*.so
+
+# Folders
+vendor/github.com/cenkalti/backoff/v4/**/_obj
+vendor/github.com/cenkalti/backoff/v4/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/cenkalti/backoff/v4/**/*.[568vq]
+vendor/github.com/cenkalti/backoff/v4/**/[568vq].out
+
+vendor/github.com/cenkalti/backoff/v4/**/*.cgo1.go
+vendor/github.com/cenkalti/backoff/v4/**/*.cgo2.c
+vendor/github.com/cenkalti/backoff/v4/**/_cgo_defun.c
+vendor/github.com/cenkalti/backoff/v4/**/_cgo_gotypes.go
+vendor/github.com/cenkalti/backoff/v4/**/_cgo_export.*
+
+vendor/github.com/cenkalti/backoff/v4/**/_testmain.go
+
+vendor/github.com/cenkalti/backoff/v4/**/*.exe
+
+# IDEs
+vendor/github.com/cenkalti/backoff/v4/**/.idea
+
+# flyctl launch added from vendor/github.com/exaring/otelpgx/.gitignore
+vendor/github.com/exaring/otelpgx/**/.idea
+
+# Binaries for programs and plugins
+vendor/github.com/exaring/otelpgx/**/*.exe
+vendor/github.com/exaring/otelpgx/**/*.exe~
+vendor/github.com/exaring/otelpgx/**/*.dll
+vendor/github.com/exaring/otelpgx/**/*.so
+vendor/github.com/exaring/otelpgx/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/exaring/otelpgx/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/exaring/otelpgx/**/*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# flyctl launch added from vendor/github.com/gofiber/fiber/v2/.gitignore
+# Binaries for programs and plugins
+vendor/github.com/gofiber/fiber/v2/**/*.exe
+vendor/github.com/gofiber/fiber/v2/**/*.exe~
+vendor/github.com/gofiber/fiber/v2/**/*.dll
+vendor/github.com/gofiber/fiber/v2/**/*.so
+vendor/github.com/gofiber/fiber/v2/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/gofiber/fiber/v2/**/*.test
+vendor/github.com/gofiber/fiber/v2/**/*.tmp
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/gofiber/fiber/v2/**/*.out
+
+# IDE files
+vendor/github.com/gofiber/fiber/v2/**/.vscode
+vendor/github.com/gofiber/fiber/v2/**/.DS_Store
+vendor/github.com/gofiber/fiber/v2/**/.idea
+
+# Misc
+vendor/github.com/gofiber/fiber/v2/**/*.fiber.gz
+vendor/github.com/gofiber/fiber/v2/**/*.fasthttp.gz
+vendor/github.com/gofiber/fiber/v2/**/*.pprof
+vendor/github.com/gofiber/fiber/v2/**/*.workspace
+
+# Dependencies
+vendor/github.com/gofiber/fiber/v2/vendor
+vendor/github.com/gofiber/fiber/v2/**/vendor
+vendor/github.com/gofiber/fiber/v2/**/vendor
+vendor/github.com/gofiber/fiber/v2/Godeps
+
+# flyctl launch added from vendor/github.com/hibiken/asynq/.gitignore
+vendor/github.com/hibiken/asynq/**/vendor
+# Binaries for programs and plugins
+vendor/github.com/hibiken/asynq/**/*.exe
+vendor/github.com/hibiken/asynq/**/*.exe~
+vendor/github.com/hibiken/asynq/**/*.dll
+vendor/github.com/hibiken/asynq/**/*.so
+vendor/github.com/hibiken/asynq/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/hibiken/asynq/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/hibiken/asynq/**/*.out
+
+# Ignore examples for now
+vendor/github.com/hibiken/asynq/examples
+
+# Ignore tool binaries
+vendor/github.com/hibiken/asynq/tools/asynq/asynq
+vendor/github.com/hibiken/asynq/tools/metrics_exporter/metrics_exporter
+
+# Ignore asynq config file
+vendor/github.com/hibiken/asynq/**/.asynq.*
+
+# Ignore editor config files
+vendor/github.com/hibiken/asynq/**/.vscode
+vendor/github.com/hibiken/asynq/**/.idea
+
+# flyctl launch added from vendor/github.com/jackc/pgx/v5/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/jackc/pgx/v5/**/*.o
+vendor/github.com/jackc/pgx/v5/**/*.a
+vendor/github.com/jackc/pgx/v5/**/*.so
+
+# Folders
+vendor/github.com/jackc/pgx/v5/**/_obj
+vendor/github.com/jackc/pgx/v5/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/jackc/pgx/v5/**/*.[568vq]
+vendor/github.com/jackc/pgx/v5/**/[568vq].out
+
+vendor/github.com/jackc/pgx/v5/**/*.cgo1.go
+vendor/github.com/jackc/pgx/v5/**/*.cgo2.c
+vendor/github.com/jackc/pgx/v5/**/_cgo_defun.c
+vendor/github.com/jackc/pgx/v5/**/_cgo_gotypes.go
+vendor/github.com/jackc/pgx/v5/**/_cgo_export.*
+
+vendor/github.com/jackc/pgx/v5/**/_testmain.go
+
+vendor/github.com/jackc/pgx/v5/**/*.exe
+
+vendor/github.com/jackc/pgx/v5/**/.envrc
+vendor/github.com/jackc/pgx/v5/.testdb
+
+vendor/github.com/jackc/pgx/v5/**/.DS_Store
+
+# flyctl launch added from vendor/github.com/redis/go-redis/v9/.gitignore
+vendor/github.com/redis/go-redis/v9/**/*.rdb
+vendor/github.com/redis/go-redis/v9/**/testdata/*
+vendor/github.com/redis/go-redis/v9/**/.idea
+vendor/github.com/redis/go-redis/v9/**/.DS_Store
+
+# flyctl launch added from vendor/github.com/robfig/cron/v3/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/robfig/cron/v3/**/*.o
+vendor/github.com/robfig/cron/v3/**/*.a
+vendor/github.com/robfig/cron/v3/**/*.so
+
+# Folders
+vendor/github.com/robfig/cron/v3/**/_obj
+vendor/github.com/robfig/cron/v3/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/robfig/cron/v3/**/*.[568vq]
+vendor/github.com/robfig/cron/v3/**/[568vq].out
+
+vendor/github.com/robfig/cron/v3/**/*.cgo1.go
+vendor/github.com/robfig/cron/v3/**/*.cgo2.c
+vendor/github.com/robfig/cron/v3/**/_cgo_defun.c
+vendor/github.com/robfig/cron/v3/**/_cgo_gotypes.go
+vendor/github.com/robfig/cron/v3/**/_cgo_export.*
+
+vendor/github.com/robfig/cron/v3/**/_testmain.go
+
+vendor/github.com/robfig/cron/v3/**/*.exe
+
+# flyctl launch added from vendor/github.com/spf13/cast/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/spf13/cast/**/*.o
+vendor/github.com/spf13/cast/**/*.a
+vendor/github.com/spf13/cast/**/*.so
+
+# Folders
+vendor/github.com/spf13/cast/**/_obj
+vendor/github.com/spf13/cast/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/spf13/cast/**/*.[568vq]
+vendor/github.com/spf13/cast/**/[568vq].out
+
+vendor/github.com/spf13/cast/**/*.cgo1.go
+vendor/github.com/spf13/cast/**/*.cgo2.c
+vendor/github.com/spf13/cast/**/_cgo_defun.c
+vendor/github.com/spf13/cast/**/_cgo_gotypes.go
+vendor/github.com/spf13/cast/**/_cgo_export.*
+
+vendor/github.com/spf13/cast/**/_testmain.go
+
+vendor/github.com/spf13/cast/**/*.exe
+vendor/github.com/spf13/cast/**/*.test
+
+vendor/github.com/spf13/cast/**/*.bench
+
+# flyctl launch added from vendor/github.com/spf13/cobra/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/spf13/cobra/**/*.o
+vendor/github.com/spf13/cobra/**/*.a
+vendor/github.com/spf13/cobra/**/*.so
+
+# Folders
+vendor/github.com/spf13/cobra/**/_obj
+vendor/github.com/spf13/cobra/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/spf13/cobra/**/*.[568vq]
+vendor/github.com/spf13/cobra/**/[568vq].out
+
+vendor/github.com/spf13/cobra/**/*.cgo1.go
+vendor/github.com/spf13/cobra/**/*.cgo2.c
+vendor/github.com/spf13/cobra/**/_cgo_defun.c
+vendor/github.com/spf13/cobra/**/_cgo_gotypes.go
+vendor/github.com/spf13/cobra/**/_cgo_export.*
+
+vendor/github.com/spf13/cobra/**/_testmain.go
+
+# Vim files https://github.com/github/gitignore/blob/master/Global/Vim.gitignore
+# swap
+vendor/github.com/spf13/cobra/**/[._]*.s[a-w][a-z]
+vendor/github.com/spf13/cobra/**/[._]s[a-w][a-z]
+# session
+vendor/github.com/spf13/cobra/**/Session.vim
+# temporary
+vendor/github.com/spf13/cobra/**/.netrwhist
+vendor/github.com/spf13/cobra/**/*~
+# auto-generated tag files
+vendor/github.com/spf13/cobra/**/tags
+
+vendor/github.com/spf13/cobra/**/*.exe
+vendor/github.com/spf13/cobra/**/cobra.test
+vendor/github.com/spf13/cobra/**/bin
+
+vendor/github.com/spf13/cobra/**/.idea
+vendor/github.com/spf13/cobra/**/*.iml
+
+# flyctl launch added from vendor/github.com/spf13/pflag/.gitignore
+vendor/github.com/spf13/pflag/**/.idea/*
+
+
+# flyctl launch added from vendor/github.com/valyala/fasthttp/.gitignore
+vendor/github.com/valyala/fasthttp/**/tags
+vendor/github.com/valyala/fasthttp/**/*.pprof
+vendor/github.com/valyala/fasthttp/**/*.fasthttp.gz
+vendor/github.com/valyala/fasthttp/**/*.fasthttp.br
+vendor/github.com/valyala/fasthttp/**/.idea
+vendor/github.com/valyala/fasthttp/**/.vscode
+vendor/github.com/valyala/fasthttp/**/.DS_Store
+vendor/github.com/valyala/fasthttp/**/vendor
+
+# flyctl launch added from vendor/go.opentelemetry.io/contrib/.gitignore
+vendor/go.opentelemetry.io/contrib/**/.DS_Store
+vendor/go.opentelemetry.io/contrib/**/Thumbs.db
+
+vendor/go.opentelemetry.io/contrib/**/.tools
+vendor/go.opentelemetry.io/contrib/**/.idea
+vendor/go.opentelemetry.io/contrib/**/.vscode
+vendor/go.opentelemetry.io/contrib/**/*.iml
+vendor/go.opentelemetry.io/contrib/**/*.so
+vendor/go.opentelemetry.io/contrib/**/coverage.*
+vendor/go.opentelemetry.io/contrib/**/go.work
+vendor/go.opentelemetry.io/contrib/**/go.work.sum
+vendor/go.opentelemetry.io/contrib/**/example
+
+vendor/go.opentelemetry.io/contrib/**/instrumentation/google.golang.org/grpc/otelgrpc/example/server/server
+vendor/go.opentelemetry.io/contrib/**/instrumentation/google.golang.org/grpc/otelgrpc/example/client/client
+
+vendor/go.opentelemetry.io/contrib/**/instrgen/driver/testdata/**/*.go_pass_*
+
+# flyctl launch added from vendor/go.opentelemetry.io/otel/.gitignore
+vendor/go.opentelemetry.io/otel/**/.DS_Store
+vendor/go.opentelemetry.io/otel/**/Thumbs.db
+
+vendor/go.opentelemetry.io/otel/**/.tools
+vendor/go.opentelemetry.io/otel/**/venv
+vendor/go.opentelemetry.io/otel/**/.idea
+vendor/go.opentelemetry.io/otel/**/.vscode
+vendor/go.opentelemetry.io/otel/**/*.iml
+vendor/go.opentelemetry.io/otel/**/*.so
+vendor/go.opentelemetry.io/otel/**/coverage.*
+vendor/go.opentelemetry.io/otel/**/go.work
+vendor/go.opentelemetry.io/otel/**/go.work.sum
+
+vendor/go.opentelemetry.io/otel/**/gen
+
+vendor/go.opentelemetry.io/otel/example/fib/fib
+vendor/go.opentelemetry.io/otel/example/fib/traces.txt
+vendor/go.opentelemetry.io/otel/example/jaeger/jaeger
+vendor/go.opentelemetry.io/otel/example/namedtracer/namedtracer
+vendor/go.opentelemetry.io/otel/example/opencensus/opencensus
+vendor/go.opentelemetry.io/otel/example/passthrough/passthrough
+vendor/go.opentelemetry.io/otel/example/prometheus/prometheus
+vendor/go.opentelemetry.io/otel/example/zipkin/zipkin
+vendor/go.opentelemetry.io/otel/example/otel-collector/otel-collector
+
+# flyctl launch added from vendor/golang.org/x/net/http2/.gitignore
+vendor/golang.org/x/net/http2/**/*~
+vendor/golang.org/x/net/http2/**/h2i/h2i
+
+# flyctl launch added from vendor/golang.org/x/sys/unix/.gitignore
+vendor/golang.org/x/sys/unix/**/_obj
+vendor/golang.org/x/sys/unix/**/unix.test
+fly.toml
