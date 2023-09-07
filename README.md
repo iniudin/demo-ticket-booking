@@ -39,7 +39,7 @@ Follow the steps below to install and run the demo:
    cd demo-ticket-booking
    ```
 
-4. Run the application using Docker Compose:
+3. Run the application using Docker Compose:
 
    ```bash
    docker-compose up --build
